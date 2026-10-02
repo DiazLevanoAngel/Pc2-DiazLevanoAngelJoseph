@@ -1,0 +1,69 @@
+* {
+  background-color: #a7a2a2;
+  font-family: arial;
+  text-align: center;
+}
+* h1 {
+  color: white;
+}
+.alerta-info {
+  background-color: #7509cd;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.alerta-success {
+  background-color: #f5142e;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.alerta-warning {
+  background-color: #be76f9;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.alerta-danger {
+  background-color: #59079c;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 5px solid #ece6e6;
+  transition: border 0.3s ease;
+}
+.alerta-danger:hover {
+  border: 10px solid black;
+}
+.card-3 {
+  font-size: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: white;
+  background-color: #9014f5;
+  margin: 10px;
+  padding: 20px;
+}
+.card-2 {
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  background-color: #9014f5;
+  margin: 10px;
+  padding: 20px;
+}
+.card-1 {
+  font-size: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+  background-color: #9014f5;
+  margin: 10px;
+  padding: 20px;
+}
+.fondo {
+  color: black;
+  background-color: #ffd900;
+}

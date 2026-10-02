@@ -1,0 +1,74 @@
+*{
+    background-color: rgb(167, 162, 162);
+    font-family: arial;
+    text-align: center;
+    h1{
+        color: white;
+    }
+}
+
+@colorBase: rgb(144, 20, 245);
+@info: darken(@colorBase, 10%);
+@success: spin(@colorBase, 80%);
+@warning: lighten(@colorBase, 20%);
+@danger: darken(@colorBase, 20%);
+.generador_alertas(@tipo, @color) {
+    .alerta-@{tipo} {
+        background-color: @color;
+        color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+
+        & when(@tipo=danger){
+            border: 5px solid rgb(236, 230, 230);
+            transition: border 0.3s ease;
+            &:hover {
+                border: 10px solid black;
+            }
+        }
+    }
+}
+.generador_alertas(info, @info);
+.generador_alertas(success, @success);
+.generador_alertas(warning, @warning);
+.generador_alertas(danger, @danger);
+
+
+
+@fuente: 10px;
+.generador_card(@n) when(@n > 0){
+    .card-@{n}{
+        font-size:  @n * @fuente;
+        box-shadow: 0 (@n * 2px) (@n * 5px) rgba(0, 0, 0, 0.3);
+        color: white;
+        background-color: rgb(144, 20, 245);;
+        margin: 10px;
+        padding: 20px;
+        
+    }
+    .generador_card(@n - 1);
+}
+.generador_card(3);
+
+
+
+@fondo: rgb(255, 217, 0);
+.detector_fondo(@fondo) when (luma(@fondo) > 50%) {
+    .fondo {
+        color: black;
+        background-color: @fondo;
+    }
+}
+
+.detector_fondo(@fondo) when (luma(@fondo) <= 50%) {
+    .fondo {
+        color: white;
+        background-color: @fondo;
+    }
+}
+
+.detector_fondo(@fondo);
+
+
+
